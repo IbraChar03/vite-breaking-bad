@@ -1,5 +1,5 @@
 <script >
-import axios from 'axios'
+import axios from "axios"
 import { store } from "./store.js"
 import HeaderApp from './components/HeaderApp.vue'
 import MainApp from './components/MainApp.vue'
@@ -31,7 +31,6 @@ export default {
     this.getApi()
   }
 
-
 }
 </script>
 
@@ -47,11 +46,4 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
-
-// main {
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-// }
 </style>

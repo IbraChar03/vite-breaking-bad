@@ -2,7 +2,6 @@
 export default {
   data() {
     return {
-      msg: "FINAL SPACE"
     }
   }
 }
@@ -11,7 +10,6 @@ export default {
 
 <template>
   <div class="container-header">
-    <!-- <h1>{{ msg }}</h1> -->
     <img src="/images/rickandmorty.png" alt="">
   </div>
 </template>

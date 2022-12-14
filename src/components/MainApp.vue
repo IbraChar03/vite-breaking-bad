@@ -46,7 +46,6 @@ export default {
 
 .cont-select {
     width: 100%;
-    // height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,8 +63,6 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 20px;
-
-
 
     .cont-cards {
         width: 100%;
