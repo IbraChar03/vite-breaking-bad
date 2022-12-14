@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="card" v-for="item in arrayCard">
-        <img :src="item.img_url" alt="">
+        <img :src="item.image" alt="">
         <div class="text">
             <div class="name">{{ item.name }}</div>
             <div class="status">{{ item.status }}</div>
@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-    width: calc(100% / 6 - 10px);
+    width: calc(100% / 5 - 10px);
     margin: 5px;
     margin-bottom: 50px;
     background-color: #6B728E;

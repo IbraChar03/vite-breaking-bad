@@ -12,7 +12,7 @@ export default {
 <template>
   <div class="container-header">
     <!-- <h1>{{ msg }}</h1> -->
-    <img src="/images/finalspace.png" alt="">
+    <img src="/images/rickandmorty.png" alt="">
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   margin-top: 50px;
 
 

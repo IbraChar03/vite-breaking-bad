@@ -18,7 +18,7 @@ export default {
       axios
         .get(store.apiURL)
         .then(res => {
-          store.arrayCards = res.data;
+          store.arrayCards = res.data.results;
         })
         .catch(err => {
           console.log("errori", err)

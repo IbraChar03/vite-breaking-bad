@@ -30,7 +30,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #BBE1FA;
+    // background-color: #BBE1FA;
     padding: 20px;
 
     .cont-cards {
