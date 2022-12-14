@@ -11,21 +11,36 @@ export default {
   data() {
     return {
       store,
-      show: true,
+      isLoading: true,
     }
   },
   methods: {
     getApi() {
-      axios
-        .get(store.apiURL)
-        .then(res => {
-          store.arrayCards = res.data.results;
-          this.show = false;
+      setTimeout(function () {
+        axios
+          .get(store.apiURL)
+          .then(res => {
+            store.arrayCards = res.data.results;
+            this.isLoading = false;
+            document.getElementById("caricamento").style.display = "none"
 
-        })
-        .catch(err => {
-          console.log("errori", err)
-        });
+          })
+          .catch(err => {
+            console.log("errori", err)
+          });
+
+
+      }, 2000)
+      // axios
+      //   .get(store.apiURL)
+      //   .then(res => {
+      //     store.arrayCards = res.data.results;
+      //     this.isLoading = false;
+
+      //   })
+      //   .catch(err => {
+      //     console.log("errori", err)
+      //   });
 
     }
 
@@ -43,7 +58,7 @@ export default {
   </header>
 
   <main>
-    <div id="caricamento" v-if="show">caricamento</div>
+    <div id="caricamento" v-if="isLoading">caricamento</div>
 
     <MainApp />
   </main>
