@@ -14,9 +14,22 @@ export default {
     }
   },
   methods: {
+    getApi() {
+      axios
+        .get(store.apiURL)
+        .then(res => {
+          store.arrayCards = res.data;
+        })
+        .catch(err => {
+          console.log("errori", err)
+        });
 
+    }
 
   },
+  mounted() {
+    this.getApi()
+  }
 
 
 }
