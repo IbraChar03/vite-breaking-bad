@@ -25,6 +25,12 @@ export default {
             <option value="#">prova</option>
         </select>
     </div>
+    <div class="characters">
+        <div class="number">
+
+            Found 21 Characters
+        </div>
+    </div>
     <section class="main">
         <div class="container">
 
@@ -37,6 +43,29 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.characters {
+    width: 100%;
+    // height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+
+    .number {
+        padding: 20px;
+        width: 65%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #A6E3E9;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        padding-left: 15px;
+    }
+}
+
+
 .main {
     width: 100%;
     height: 100%;
@@ -58,7 +87,7 @@ export default {
 }
 
 .container {
-    width: 75%;
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
