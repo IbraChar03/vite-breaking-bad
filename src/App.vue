@@ -16,31 +16,17 @@ export default {
   },
   methods: {
     getApi() {
-      setTimeout(function () {
-        axios
-          .get(store.apiURL)
-          .then(res => {
-            store.arrayCards = res.data.results;
-            this.isLoading = false;
-            document.getElementById("caricamento").style.display = "none"
 
-          })
-          .catch(err => {
-            console.log("errori", err)
-          });
+      axios
+        .get(store.apiURL)
+        .then(res => {
+          store.arrayCards = res.data.results;
+          this.isLoading = false;
 
-
-      }, 2000)
-      // axios
-      //   .get(store.apiURL)
-      //   .then(res => {
-      //     store.arrayCards = res.data.results;
-      //     this.isLoading = false;
-
-      //   })
-      //   .catch(err => {
-      //     console.log("errori", err)
-      //   });
+        })
+        .catch(err => {
+          console.log("errori", err)
+        });
 
     }
 
@@ -58,9 +44,12 @@ export default {
   </header>
 
   <main>
-    <div id="caricamento" v-if="isLoading">caricamento</div>
 
     <MainApp />
+
+    <div id="caricamento" v-if="isLoading">
+      <font-awesome-icon icon="fa-solid fa-spinner" />
+    </div>
   </main>
 </template>
 
@@ -68,6 +57,12 @@ export default {
 @use "./styles/general.scss" as *;
 
 #caricamento {
-  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+
 }
 </style>
