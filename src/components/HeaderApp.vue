@@ -11,7 +11,8 @@ export default {
 
 <template>
   <div class="container-header">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
+    <img src="/images/finalspace.png" alt="">
   </div>
 </template>
 
@@ -22,12 +23,19 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
 
   h1 {
     color: #393E46;
     font-size: 30px;
     font-weight: bold;
+  }
+
+  img {
+    width: 700px;
+    height: 300px;
   }
 }
 </style>
