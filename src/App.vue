@@ -36,7 +36,10 @@ export default {
 </script>
 
 <template>
-  <HeaderApp />
+  <header>
+    <HeaderApp />
+  </header>
+
   <main>
     <MainApp />
   </main>
@@ -44,4 +47,11 @@ export default {
 
 <style lang="scss" scoped>
 @use "./styles/general.scss" as *;
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 </style>

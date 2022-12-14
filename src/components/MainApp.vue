@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             store,
-            msg: "ciao"
+
         }
     }
 }
@@ -17,12 +17,28 @@ export default {
 
 <template>
     <div class="container">
-
-        <Card :arrayCard="store.arrayCards" />
+        <div class=cont-cards>
+            <Card :arrayCard="store.arrayCards" />
+        </div>
     </div>
 
 </template>
 
 <style lang="scss" scoped>
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BBE1FA;
+    padding: 20px;
 
+    .cont-cards {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 </style>
