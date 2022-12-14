@@ -28,7 +28,7 @@ export default {
     <div class="characters">
         <div class="number">
 
-            Found 21 Characters
+            Found {{ store.arrayCards.length }} Characters
         </div>
     </div>
     <section class="main">
