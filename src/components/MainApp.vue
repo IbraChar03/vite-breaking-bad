@@ -1,9 +1,9 @@
 <script>
 import { store } from "../store.js"
-import Card from './Card.vue'
+import Cards from './Cards.vue'
 export default {
     components: {
-        Card,
+        Cards,
     },
     data() {
         return {
@@ -29,7 +29,7 @@ export default {
         <div class="container">
 
             <div class=cont-cards>
-                <Card :arrayCard="store.arrayCards" />
+                <Cards :arrayCard="store.arrayCards" />
             </div>
         </div>
     </section>
