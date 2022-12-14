@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       store,
+      show: true,
     }
   },
   methods: {
@@ -19,6 +20,8 @@ export default {
         .get(store.apiURL)
         .then(res => {
           store.arrayCards = res.data.results;
+          this.show = false;
+
         })
         .catch(err => {
           console.log("errori", err)
@@ -40,10 +43,16 @@ export default {
   </header>
 
   <main>
+    <div id="caricamento" v-if="show">caricamento</div>
+
     <MainApp />
   </main>
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
+
+#caricamento {
+  font-size: 30px;
+}
 </style>
