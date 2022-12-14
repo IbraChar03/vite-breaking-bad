@@ -25,7 +25,7 @@ export default {
     width: calc(100% / 5 - 10px);
     margin: 5px;
     margin-bottom: 50px;
-    background-color: #6B728E;
+    background-color: #7895B2;
     border-radius: 5px;
 
     img {
@@ -40,7 +40,7 @@ export default {
         .name,
         .status,
         .species {
-            font-size: 17px;
+            font-size: 18px;
             margin-bottom: 5px;
         }
 
