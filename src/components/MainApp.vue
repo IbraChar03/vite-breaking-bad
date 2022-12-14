@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;

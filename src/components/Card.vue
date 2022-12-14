@@ -24,7 +24,6 @@ export default {
 .card {
     width: calc(100% / 6 - 10px);
     margin: 5px;
-    // height: 250px;
     margin-bottom: 50px;
     background-color: #6B728E;
     border-radius: 5px;
@@ -32,6 +31,7 @@ export default {
     img {
         height: 180px;
         width: 100%;
+        border-radius: 5px;
     }
 
     .text {
@@ -40,9 +40,17 @@ export default {
         .name,
         .status,
         .species {
-            color: #F6F6F6;
+            font-size: 17px;
             margin-bottom: 5px;
-            max-width: 150px;
+        }
+
+        .name {
+            color: white;
+        }
+
+        .status,
+        .species {
+            color: #C9D6DF;
         }
     }
 
