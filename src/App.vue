@@ -3,10 +3,12 @@ import axios from "axios"
 import { store } from "./store.js"
 import HeaderApp from './components/HeaderApp.vue'
 import MainApp from './components/MainApp.vue'
+import Search from './components/Search.vue'
 export default {
   components: {
     HeaderApp,
-    MainApp
+    MainApp,
+    Search
   },
   data() {
     return {
@@ -16,9 +18,12 @@ export default {
   },
   methods: {
     getApi() {
-
+      let api = store.apiURL
+      if (store.status === "Alive" || store.status === "Dead" || store.status === "Unknown") {
+        api += `?status=${store.status}`
+      }
       axios
-        .get(store.apiURL)
+        .get(api)
         .then(res => {
           store.arrayCards = res.data.results;
           this.isLoading = false;
@@ -44,7 +49,7 @@ export default {
   </header>
 
   <main>
-
+    <Search @searchFunction="getApi" />
     <MainApp />
 
     <div id="caricamento" v-if="isLoading">

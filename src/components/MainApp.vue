@@ -17,14 +17,7 @@ export default {
 
 <template>
 
-    <div class="cont-select">
-        <select name="select" id="" class="select">
-            <option value="" disabled selected hidden>Select Category</option>
-            <option value="#">prova</option>
-            <option value="#">prova</option>
-            <option value="#">prova</option>
-        </select>
-    </div>
+
     <div class="characters">
         <div class="number">
 
@@ -73,18 +66,6 @@ export default {
     justify-content: center;
 }
 
-.cont-select {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .select {
-        padding: 6px;
-        font-size: 13px;
-        border-radius: 5px;
-    }
-}
 
 .container {
     width: 65%;
