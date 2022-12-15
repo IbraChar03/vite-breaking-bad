@@ -4,11 +4,13 @@ import { store } from "./store.js"
 import HeaderApp from './components/HeaderApp.vue'
 import MainApp from './components/MainApp.vue'
 import Search from './components/Search.vue'
+import Loader from './components/Loader.vue'
 export default {
   components: {
     HeaderApp,
     MainApp,
-    Search
+    Search,
+    Loader
   },
   data() {
     return {
@@ -22,6 +24,7 @@ export default {
       if (store.status === "Alive" || store.status === "Dead" || store.status === "Unknown") {
         api += `?status=${store.status}`
       }
+
       axios
         .get(api)
         .then(res => {
@@ -44,17 +47,15 @@ export default {
 </script>
 
 <template>
+  <Loader v-if="isLoading" />
   <header>
-    <HeaderApp />
+    <HeaderApp v-if="!isLoading" />
   </header>
 
   <main>
-    <Search @searchFunction="getApi" />
-    <MainApp />
+    <Search @searchFunction="getApi" v-if="!isLoading" />
+    <MainApp v-if="!isLoading" />
 
-    <div id="caricamento" v-if="isLoading">
-      <font-awesome-icon icon="fa-solid fa-spinner" />
-    </div>
   </main>
 </template>
 
