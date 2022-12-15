@@ -22,7 +22,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
-  margin-top: 50px;
+  margin-top: 70px;
 
 
   h1 {
