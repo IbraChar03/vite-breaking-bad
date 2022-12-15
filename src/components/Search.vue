@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         reset() {
-            store.status = "Select status"
+            store.status = ""
             this.$emit(`searchFunction`)
         }
     }
@@ -22,7 +22,6 @@ export default {
     <div class="cont-select">
         <select name="" id="" class="select" v-model="store.status" @change="$emit(`searchFunction`)">
             <option value="" disabled selected hidden>Select status</option>
-            <option value="Select status" disabled selected hidden>Select status</option>
             <option>Alive</option>
             <option>Dead</option>
             <option>Unknown</option>

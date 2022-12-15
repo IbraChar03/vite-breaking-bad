@@ -21,7 +21,7 @@ export default {
   methods: {
     getApi() {
       let api = store.apiURL
-      if (store.status === "Alive" || store.status === "Dead" || store.status === "Unknown") {
+      if (store.status !== "") {
         api += `?status=${store.status}`
       }
 
